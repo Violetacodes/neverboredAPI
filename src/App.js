@@ -1,6 +1,7 @@
 import './App.css';
 import { useEffect} from 'react';
 import { useState } from 'react';
+import 'animate.css';
 import image from "./dog.png"
 
 
@@ -21,23 +22,25 @@ useEffect(() => {
   fetchData();
 },[generate])
 
+
   return (
     <div>
     <div className='text'>
     <img src={image} width="700px" alt='doggy' />
     <div className='texttwo'>
-   <h1>Looking for an idea for a weekend? 🔥🎾 <br></br>
+   <h1 className='animate__animated animate__fadeInUp'>Looking for an idea for a weekend? 🔥🎾 <br></br>
        Got tired from Monopoly game? 🎩 <br></br>
        Or simply you are bored? 😔 <br></br>
        WE GOT YOU! 😉 💃🏽🕺 </h1>
   </div>
     </div>
     <div className='app'>
-      <p className='advice'>{activity}</p>
-      <button onClick={getAdvice}>Get adv🧊</button>
+      <p className='advice animate__animated animate__flipInX animate__slow'>{activity}</p>
+      <button className='animate__animated animate__rotateInDownRight' onClick={getAdvice}>Get adv🧊</button>
     </div>
     </div>
   );
 }
 
 export default App;
+
