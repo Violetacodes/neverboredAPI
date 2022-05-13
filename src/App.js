@@ -6,7 +6,7 @@ import image from "./dog.png"
 
 function App() {
 
-const [activity, setActivity] = useState("Get your dog to the walk!");
+const [activity, setActivity] = useState("");
 const [generate, setGenerate] = useState('');
 
 const getAdvice = () => {
